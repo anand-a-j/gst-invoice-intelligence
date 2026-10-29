@@ -10,6 +10,7 @@ class Settings(BaseSettings):
     environment: str = "development"
     llm_provider: Literal["openai", "anthropic"] = "openai"
     openai_api_key: SecretStr = SecretStr("")
+    openai_model: str = "gpt-4.1-mini"
     anthropic_api_key: SecretStr = SecretStr("")
     anthropic_model: str = "claude-3-5-haiku-latest"
     llm_temperature: float = Field(default=0.0, ge=0.0, le=1.0)
